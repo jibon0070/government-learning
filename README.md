@@ -1,3 +1,15 @@
-# Info
+# IDE Setup
 
-This is a personal project to track progress and sharing home work with government trainers.
+![IDE](/assets/ide-setup.png)
+
+# Live Server Setup
+
+![Live Server](/assets/live-server-setup.png)
+
+# Code
+
+![Code](/assets/code.png)
+
+# Code Preview
+
+![Code Preview](/assets/code-preview.png)
