@@ -1,0 +1,6 @@
+/.git
+/assets
+/.dockerignore
+/Dockerfile
+/README.md
+/compose.yaml
