@@ -1,0 +1,121 @@
+body {
+  background-image: url("/images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100svh;
+  display: flex;
+  align-items: center;
+
+  .container {
+    padding: 2em;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4em;
+
+    .card {
+      overflow: hidden;
+      border-radius: 20px;
+      background: #dfedea;
+
+      text-align: center;
+      display: grid;
+      gap: 2em;
+      line-height: 1.5;
+
+      .card-image {
+        img {
+          width: 100%;
+          aspect-ratio: 16/9;
+          object-fit: cover;
+        }
+      }
+
+      .card-content {
+        padding: 1em;
+        display: grid;
+        gap: 2em;
+        .card-title {
+          font-size: 2.5em;
+          font-weight: bold;
+          line-height: 1.2;
+        }
+
+        .card-description {
+          color: #5c5c5c;
+        }
+      }
+
+      .card-footer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        .footer-item {
+          padding: 1.5em;
+          line-height: 1;
+          border-right: 1px solid #595959;
+          &:last-child {
+            border-right: none;
+          }
+          span {
+            display: block;
+          }
+
+          .number {
+            font-size: 1.5em;
+            sup {
+              font-size: 0.5em;
+              position: relative;
+              top: -0.7em;
+            }
+          }
+
+          .text {
+            text-transform: uppercase;
+            font-size: 0.8em;
+          }
+        }
+      }
+
+      &.pink {
+        --color: #e6125c;
+
+        .time {
+          color: var(--color);
+        }
+
+        .card-footer {
+          color: white;
+          background: var(--color);
+        }
+      }
+
+      &.orange {
+        --color: #f05b29;
+
+        .time {
+          color: var(--color);
+        }
+
+        .card-footer {
+          color: white;
+          background: var(--color);
+        }
+      }
+
+      &.green {
+        --color: #27961e;
+
+        .time {
+          color: var(--color);
+        }
+
+        .card-footer {
+          color: white;
+          background: var(--color);
+        }
+      }
+    }
+  }
+}
