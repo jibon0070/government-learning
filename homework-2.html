@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Form Element</title>
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <main>
+      <h2>Homework #2</h2>
+      <form class="homework-2">
+        <table>
+          <thead>
+            <tr>
+              <th colspan="2">
+                <h3>Absence Request Form</h3>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <label for="name">Name:</label>
+              </td>
+              <td>
+                <input type="text" id="name" placeholder="eg. John Doe" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="email">E-mail <br />Address:</label>
+              </td>
+              <td>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="eg. Ii4Fp@example.com"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td><label for="position">Position:</label></td>
+              <td>
+                <input
+                  type="text"
+                  id="position"
+                  placeholder="eg. I haven't decided yet."
+                />
+              </td>
+            </tr>
+            <tr>
+              <td><label for="department">Department:</label></td>
+              <td>
+                <select id="department">
+                  <option value="">Select a department</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <hr />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Reason for <br />
+                absence?
+              </td>
+              <td>
+                <label class="radio">
+                  <input type="radio" name="reason" checked />
+                  <span class="mark"></span> Floating Holiday
+                </label>
+                <label class="radio">
+                  <input type="radio" name="reason" />
+                  <span class="mark"></span> Vacation
+                </label>
+                <label class="radio">
+                  <input type="radio" name="reason" />
+                  <span class="mark"></span> Sick Leave
+                </label>
+                <label class="radio">
+                  <input type="radio" name="reason" />
+                  <span class="mark"></span> FMLA
+                </label>
+                <label class="radio">
+                  <input type="radio" name="reason" />
+                  <span class="mark"></span> Other:
+                  <input type="text" placeholder="eg. My dog ate my homework" />
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <hr />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="date-of-absence-from">Dates of absence:</label>
+              </td>
+              <td>
+                <input type="date" id="date-of-absence-from" />
+                <label for="to">to</label>
+                <input type="date" id="date-of-absence-from" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="total-days">
+                  Total days <br />
+                  absent:
+                </label>
+              </td>
+              <td>
+                <input
+                  type="text"
+                  id="total-days"
+                  placeholder="eg. We really don't want you to go...."
+                />
+                <div style="height: 0.5em"></div>
+                <label class="radio">
+                  <input type="radio" name="pay" />
+                  <span class="mark"></span>
+                  With Pay
+                </label>
+                <label class="radio">
+                  <input type="radio" name="pay" checked />
+                  <span class="mark"></span>
+                  Without Pay
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td><label for="comments">Comments:</label></td>
+              <td>
+                <textarea
+                  id="comments"
+                  rows="6"
+                  placeholder="Now you have comments too?"
+                ></textarea>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <button type="reset">Reset</button>
+                <button type="submit" style="margin-left: 0.25em">
+                  Submit
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </main>
+  </body>
+</html>
