@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Form Element</title>
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <main>
+      <h2>Homework #1</h2>
+      <form class="homework-1">
+        <table border="1">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><label for="name">Name</label></td>
+              <td>
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="Please enter your name"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Sex</td>
+              <td class="sex-input">
+                <label class="radio">
+                  <input type="radio" name="sex" value="male" checked />
+                  <span class="mark"></span>
+                  Male
+                </label>
+                <label class="radio">
+                  <input type="radio" name="sex" value="female" />
+                  <span class="mark"></span>
+                  Female
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td><label for="eye-color">Eye Color</label></td>
+              <td>
+                <select id="eye-color">
+                  <option value="black">Black</option>
+                  <option value="blue">Blue</option>
+                  <option value="green">Green</option>
+                  <option value="brown">Brown</option>
+                  <option value="other">Other</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>Check all that apply</td>
+              <td class="apply">
+                <label class="checkbox">
+                  <input type="checkbox" checked />
+                  <span class="mark"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M20 6 9 17l-5-5" /></svg
+                  ></span>
+                  Over 6 feet tall
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" />
+                  <span class="mark"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M20 6 9 17l-5-5" /></svg
+                  ></span>
+                  Over 200 pounds
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <label for="description">Describe your athletic ability:</label
+                ><br />
+                <textarea
+                  id="description"
+                  rows="6"
+                  placeholder="Short description here"
+                ></textarea>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <div class="submit">
+                  <button>Enter information</button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </main>
+  </body>
+</html>
