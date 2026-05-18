@@ -1,0 +1,251 @@
+body {
+  & * {
+    box-sizing: border-box;
+  }
+  --fg-color: #d1d1d1;
+  --border-width: 2px;
+  --dark-border-color: #575757;
+  --light-border-color: var(--fg-color);
+  --bg-color: #141414;
+
+  color: var(--fg-color);
+  background: var(--bg-color);
+
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1em;
+    display: grid;
+    gap: 1em;
+
+    h2 {
+      font-size: 2em;
+    }
+
+    h3 {
+      font-size: 1.5em;
+    }
+
+    a {
+      color: white;
+    }
+
+    table {
+      width: 100%;
+      th,
+      td {
+        vertical-align: top;
+        padding: 0.25em;
+      }
+
+      &[border="1"] {
+        border-top: var(--border-width) solid var(--light-border-color);
+        border-right: var(--border-width) solid var(--light-border-color);
+        border-left: var(--border-width) solid var(--dark-border-color);
+        border-bottom: var(--border-width) solid var(--dark-border-color);
+
+        border-collapse: separate;
+        border-spacing: 0.25em;
+        td,
+        th {
+          border-top: var(--border-width) solid var(--light-border-color);
+          border-right: var(--border-width) solid var(--light-border-color);
+          border-left: var(--border-width) solid var(--dark-border-color);
+          border-bottom: var(--border-width) solid var(--dark-border-color);
+        }
+      }
+    }
+
+    .homework-1 {
+      .sex-input {
+        display: grid;
+        gap: 0.25em;
+      }
+      .apply {
+        display: grid;
+        gap: 0.25em;
+      }
+      .submit {
+        display: flex;
+        justify-content: center;
+      }
+      td,
+      th {
+        vertical-align: middle;
+      }
+    }
+
+    .homework-2 {
+      table {
+        border-top: var(--border-width) solid var(--light-border-color);
+        border-right: var(--border-width) solid var(--light-border-color);
+        border-left: var(--border-width) solid var(--dark-border-color);
+        border-bottom: var(--border-width) solid var(--dark-border-color);
+        thead th {
+          text-align: left;
+        }
+        tbody {
+          td {
+            white-space: nowrap;
+            &:first-child {
+              text-align: right;
+              width: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .homework-3 {
+      display: grid;
+      gap: 1em;
+
+      .form-field {
+        label {
+          display: block;
+          margin-bottom: 0.5em;
+        }
+      }
+    }
+
+    input {
+      background: none;
+      outline: none;
+      border-top: var(--border-width) solid var(--light-border-color);
+      border-right: var(--border-width) solid var(--light-border-color);
+      border-left: var(--border-width) solid var(--dark-border-color);
+      border-bottom: var(--border-width) solid var(--dark-border-color);
+      padding: 0.25em 0.5em;
+      color: var(--fg-color);
+      color-scheme: dark;
+    }
+
+    .radio {
+      --size: 0.75em;
+
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
+
+      input[type="radio"] {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+      }
+
+      input[type="radio"]:checked ~ .mark {
+        &::after {
+          --radious: calc(var(--size) - 0.5em);
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          content: "";
+          display: block;
+          height: var(--radious);
+          width: var(--radious);
+          border-radius: 50%;
+
+          background: var(--fg-color);
+        }
+      }
+      .mark {
+        position: relative;
+        display: inline-block;
+        height: var(--size);
+        width: var(--size);
+        border: var(--border-width) solid var(--light-border-color);
+        border-radius: 50%;
+      }
+    }
+
+    .checkbox {
+      --size: 1em;
+      display: flex;
+      align-items: center;
+      gap: 0.25em;
+
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+
+      .mark {
+        display: inline-block;
+        height: var(--size);
+        width: var(--size);
+        border: var(--border-width) solid var(--light-border-color);
+        svg {
+          display: none;
+        }
+      }
+
+      input[type="checkbox"] {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+
+        &:checked ~ .mark {
+          svg {
+            display: block;
+          }
+        }
+      }
+    }
+
+    select {
+      background: none;
+      color: var(--fg-color);
+      outline: none;
+      border-top: var(--border-width) solid var(--light-border-color);
+      border-right: var(--border-width) solid var(--light-border-color);
+      border-left: var(--border-width) solid var(--dark-border-color);
+      border-bottom: var(--border-width) solid var(--dark-border-color);
+      padding: 0.25em 0.5em;
+
+      option {
+        background: var(--bg-color);
+        color: var(--fg-color);
+      }
+    }
+
+    textarea {
+      background: none;
+      color: var(--fg-color);
+      outline: none;
+      border-top: var(--border-width) solid var(--light-border-color);
+      border-right: var(--border-width) solid var(--light-border-color);
+      border-left: var(--border-width) solid var(--dark-border-color);
+      border-bottom: var(--border-width) solid var(--dark-border-color);
+      padding: 0.25em 0.5em;
+
+      resize: none;
+      width: 100%;
+    }
+
+    button {
+      color: var(--fg-color);
+      background: rgba(255, 255, 255, 0.05);
+      outline: none;
+      border-top: var(--border-width) solid var(--light-border-color);
+      border-right: var(--border-width) solid var(--light-border-color);
+      border-left: var(--border-width) solid var(--dark-border-color);
+      border-bottom: var(--border-width) solid var(--dark-border-color);
+      padding: 0.25em 0.5em;
+      cursor: pointer;
+      transition: background 0.2s ease-in-out;
+      display: inline-block;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.1);
+      }
+    }
+  }
+}
