@@ -1,3 +1,11 @@
-# Info
+# Preview
 
-This is a personal project to track progress and sharing home work with government trainers.
+![Preview](/assets/preview.png)
+
+# HTML
+
+![HTML](/assets/html.png)
+
+# CSS
+
+![CSS](/assets/css.png)
