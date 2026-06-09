@@ -1,0 +1,29 @@
+header {
+  background: #333;
+
+  .header-top {
+    padding: 1em 1em 0 1em;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+
+  .m-logo-img {
+    --size: 3em;
+    width: var(--size);
+    height: var(--size);
+    object-fit: cover;
+    border-radius: 50%;
+  }
+}
+
+body {
+  background: #222;
+  color: white;
+}
+
+section.best-selling {
+  max-width: 1400px;
+  margin: auto;
+  padding: 2em;
+}
